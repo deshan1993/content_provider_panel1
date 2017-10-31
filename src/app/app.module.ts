@@ -66,6 +66,11 @@ import { AddConsumersComponent } from './views/pages/core/admin/content-consumer
 import { ContentAuthorizerReportComponent } from './views/pages/core/admin/reports/content-authorizer/content-authorizer-report.component';
 import { ContentProviderReportComponent } from './views/pages/core/admin/reports/content-provider/content-provider-report.component';
 import { LoginComponent } from './views/forms/login/login.component';
+import { ContentProviderDashboardComponent } from './views/pages/core/content-provider/dashboard/content-provider-dashboard.component';
+import { ContentProviderProfileComponent } from './views/pages/core/content-provider/profile/content-provider-profile.component';
+import { SingleSubmissionComponent } from './views/pages/core/content-provider/submissions/single-submission/single-submission.component';
+import { MultipleSubmissionComponent } from './views/pages/core/content-provider/submissions/multiple-submission/multiple-submission.component';
+import { ContentProviderHistoryComponent } from './views/pages/core/content-provider/history/content-provider-history.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -99,7 +104,13 @@ export function startupServiceFactory(startupService: StartupService): Function 
     AddConsumersComponent, //admin add content consumers
     ContentAuthorizerReportComponent, //admin content authorizer report
     ContentProviderReportComponent, //admin content provider report
-    LoginComponent //login page
+    LoginComponent, //login page
+
+    ContentProviderDashboardComponent,
+    ContentProviderProfileComponent,
+    SingleSubmissionComponent,
+    MultipleSubmissionComponent,
+    ContentProviderHistoryComponent
   ],
   imports: [
     BrowserModule,

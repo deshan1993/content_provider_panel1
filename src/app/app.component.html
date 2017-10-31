@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Admin Panel</a>
+    <a class="navbar-brand" href="index.html">Content Provider Panel</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,31 +7,42 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" [routerLink]="['dashboard']">
+          <a class="nav-link" [routerLink]="['cp-dashboard']">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users' Details">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#userList" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-users"></i>
-            <span class="nav-link-text" [routerLink]="['users/view-users']">Users</span>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profile">
+          <a class="nav-link" [routerLink]="['cp-profile']">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text">Profile</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="userList">
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Submissions">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#subList" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file-text-o"></i>
+            <span class="nav-link-text" [routerLink]="['submissions/cp-single-submission']">Submissions</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="subList">
             <li>
-              <a [routerLink]="['users/view-users']">View Users</a>
+              <a [routerLink]="['submissions/cp-single-submission']">Single Submission</a>
             </li>
             <li>
-              <a [routerLink]="['users/add-users']">Add Users</a>
+              <a [routerLink]="['submissions/cp-multiple-submission']">Multiple Submission</a>
             </li>
-            <!-- <li>
-              <a [routerLink]="['users/change-password']">Change Password</a>
-            </li> -->
           </ul>
         </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Authorizers' Details">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="History">
+          <a class="nav-link" [routerLink]="['cp-history']">
+            <i class="fa fa-fw fa-history"></i>
+            <span class="nav-link-text">Submission History</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Authorizers' Details">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#authorList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text" [routerLink]="['content-authorizer/view-authorizers']">Content Authorizer</span>
@@ -44,9 +55,9 @@
               <a [routerLink]="['content-authorizer/add-authorizers']">Add Authorizers</a>
             </li>
           </ul>
-        </li>
+        </li> -->
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Providers' Details">
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Providers' Details">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#providerList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text" [routerLink]="['content-provider/view-providers']">Content Provider</span>
@@ -59,9 +70,9 @@
               <a [routerLink]="['content-provider/add-providers']">Add Providers</a>
             </li>
           </ul>
-        </li>
+        </li> -->
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consumers' Details">
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consumers' Details">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#consumerList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text" [routerLink]="['content-consumer/view-consumers']">Content Consumer</span>
@@ -74,9 +85,9 @@
               <a [routerLink]="['content-consumer/add-consumers']">Add Consumers</a>
             </li>
           </ul>
-        </li>
+        </li> -->
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reports">
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reports">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#reportList" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file-text"></i>
             <span class="nav-link-text" [routerLink]="['reports/content-authorizer-report']">Reports</span>
@@ -89,7 +100,7 @@
               <a [routerLink]="['reports/content-provider-report']">Content Provider</a>
             </li>
           </ul>
-        </li>
+        </li> -->
 
         <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Content Provider">
           <a class="nav-link" [routerLink]="['/content-provider']">

@@ -20,6 +20,11 @@ import { AddConsumersComponent } from './views/pages/core/admin/content-consumer
 import { ContentAuthorizerReportComponent } from './views/pages/core/admin/reports/content-authorizer/content-authorizer-report.component';
 import { ContentProviderReportComponent } from './views/pages/core/admin/reports/content-provider/content-provider-report.component';
 import { LoginComponent } from './views/forms/login/login.component';
+import { ContentProviderDashboardComponent } from './views/pages/core/content-provider/dashboard/content-provider-dashboard.component';
+import { ContentProviderProfileComponent } from './views/pages/core/content-provider/profile/content-provider-profile.component';
+import { SingleSubmissionComponent } from './views/pages/core/content-provider/submissions/single-submission/single-submission.component';
+import { MultipleSubmissionComponent } from './views/pages/core/content-provider/submissions/multiple-submission/multiple-submission.component';
+import { ContentProviderHistoryComponent } from './views/pages/core/content-provider/history/content-provider-history.component';
 
 
 export const routes: Routes = [
@@ -44,7 +49,12 @@ export const routes: Routes = [
   { path: 'reports/content-authorizer-report', component: ContentAuthorizerReportComponent},
   { path: 'reports/content-provider-report', component: ContentProviderReportComponent},
   { path: 'login', component: LoginComponent},
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+  { path: 'cp-dashboard', component: ContentProviderDashboardComponent},
+  { path: 'cp-profile', component: ContentProviderProfileComponent},
+  { path: 'submissions/cp-single-submission', component: SingleSubmissionComponent},
+  { path: 'submissions/cp-multiple-submission', component: MultipleSubmissionComponent},
+  { path: 'cp-history', component: ContentProviderHistoryComponent},
+  { path: '', redirectTo: 'cp-dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
