@@ -25,6 +25,18 @@ import { ContentProviderProfileComponent } from './views/pages/core/content-prov
 import { SingleSubmissionComponent } from './views/pages/core/content-provider/submissions/single-submission/single-submission.component';
 import { MultipleSubmissionComponent } from './views/pages/core/content-provider/submissions/multiple-submission/multiple-submission.component';
 import { ContentProviderHistoryComponent } from './views/pages/core/content-provider/history/content-provider-history.component';
+import { CpArticlesComponent } from './views/pages/core/content-provider/submissions/multiple-submission/articles/cp-articles.component';
+import { CpAudioClipComponent } from './views/pages/core/content-provider/submissions/multiple-submission/audio-clip/cp-audio-clip.component';
+import { CpBooksComponent } from './views/pages/core/content-provider/submissions/multiple-submission/books/cp-books.component';
+import { CpCaseStudyComponent } from './views/pages/core/content-provider/submissions/multiple-submission/case-study/cp-case-study.component';
+import { CpImagesComponent } from './views/pages/core/content-provider/submissions/multiple-submission/images/cp-images.component';
+import { CpVideoClipComponent } from './views/pages/core/content-provider/submissions/multiple-submission/video-clip/cp-video-clip.component';
+import { CpArticlesHistoryComponent } from './views/pages/core/content-provider/history/articles/cp-articles-history.component';
+import { CpAudioClipHistoryComponent } from './views/pages/core/content-provider/history/audio-clip/cp-audio-clip-history.component';
+import { CpBooksHistoryComponent } from './views/pages/core/content-provider/history/books/cp-books-history.component';
+import { CpCaseStudyHistoryComponent } from './views/pages/core/content-provider/history/case-study/cp-case-study-history.component';
+import { CpImagesHistoryComponent } from './views/pages/core/content-provider/history/images/cp-images-history.component';
+import { CpVideoClipHistoryComponent } from './views/pages/core/content-provider/history/video-clip/cp-video-clip-history.component';
 
 
 export const routes: Routes = [
@@ -52,8 +64,26 @@ export const routes: Routes = [
   { path: 'cp-dashboard', component: ContentProviderDashboardComponent},
   { path: 'cp-profile', component: ContentProviderProfileComponent},
   { path: 'submissions/cp-single-submission', component: SingleSubmissionComponent},
-  { path: 'submissions/cp-multiple-submission', component: MultipleSubmissionComponent},
-  { path: 'cp-history', component: ContentProviderHistoryComponent},
+  { path: 'submissions/cp-multiple-submission', component: MultipleSubmissionComponent,
+  children: [
+    { path: 'cp-articles', component: CpArticlesComponent},
+    { path: 'cp-audio-clip', component: CpAudioClipComponent},
+    { path: 'cp-books', component: CpBooksComponent},
+    { path: 'cp-case-study', component: CpCaseStudyComponent},
+    { path: 'cp-images', component: CpImagesComponent},
+    { path: 'cp-video-clip', component: CpVideoClipComponent}
+  ]
+},
+  { path: 'cp-history', component: ContentProviderHistoryComponent,
+  children: [
+    { path: 'cp-articles-history', component: CpArticlesHistoryComponent},
+    { path: 'cp-audio-clip-history', component: CpAudioClipHistoryComponent},
+    { path: 'cp-books-history', component: CpBooksHistoryComponent},
+    { path: 'cp-case-study-history', component: CpCaseStudyHistoryComponent},
+    { path: 'cp-images-history', component: CpImagesHistoryComponent},
+    { path: 'cp-video-clip-history', component: CpVideoClipHistoryComponent}
+  ]
+},
   { path: '', redirectTo: 'cp-dashboard', pathMatch: 'full' }
 ];
 

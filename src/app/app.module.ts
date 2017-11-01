@@ -71,6 +71,18 @@ import { ContentProviderProfileComponent } from './views/pages/core/content-prov
 import { SingleSubmissionComponent } from './views/pages/core/content-provider/submissions/single-submission/single-submission.component';
 import { MultipleSubmissionComponent } from './views/pages/core/content-provider/submissions/multiple-submission/multiple-submission.component';
 import { ContentProviderHistoryComponent } from './views/pages/core/content-provider/history/content-provider-history.component';
+import { CpArticlesComponent } from './views/pages/core/content-provider/submissions/multiple-submission/articles/cp-articles.component';
+import { CpAudioClipComponent } from './views/pages/core/content-provider/submissions/multiple-submission/audio-clip/cp-audio-clip.component';
+import { CpBooksComponent } from './views/pages/core/content-provider/submissions/multiple-submission/books/cp-books.component';
+import { CpCaseStudyComponent } from './views/pages/core/content-provider/submissions/multiple-submission/case-study/cp-case-study.component';
+import { CpImagesComponent } from './views/pages/core/content-provider/submissions/multiple-submission/images/cp-images.component';
+import { CpVideoClipComponent } from './views/pages/core/content-provider/submissions/multiple-submission/video-clip/cp-video-clip.component';
+import { CpArticlesHistoryComponent } from './views/pages/core/content-provider/history/articles/cp-articles-history.component';
+import { CpAudioClipHistoryComponent } from './views/pages/core/content-provider/history/audio-clip/cp-audio-clip-history.component';
+import { CpBooksHistoryComponent } from './views/pages/core/content-provider/history/books/cp-books-history.component';
+import { CpCaseStudyHistoryComponent } from './views/pages/core/content-provider/history/case-study/cp-case-study-history.component';
+import { CpImagesHistoryComponent } from './views/pages/core/content-provider/history/images/cp-images-history.component';
+import { CpVideoClipHistoryComponent } from './views/pages/core/content-provider/history/video-clip/cp-video-clip-history.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -106,11 +118,27 @@ export function startupServiceFactory(startupService: StartupService): Function 
     ContentProviderReportComponent, //admin content provider report
     LoginComponent, //login page
 
-    ContentProviderDashboardComponent,
+    ContentProviderDashboardComponent, //content provider components
     ContentProviderProfileComponent,
     SingleSubmissionComponent,
     MultipleSubmissionComponent,
-    ContentProviderHistoryComponent
+    ContentProviderHistoryComponent,
+
+    CpArticlesComponent, //multiple submission component @ content provider
+    CpAudioClipComponent,
+    CpBooksComponent,
+    CpCaseStudyComponent,
+    CpImagesComponent,
+    CpVideoClipComponent,
+
+    CpArticlesHistoryComponent, //multiple submission history
+    CpAudioClipHistoryComponent,
+    CpBooksHistoryComponent,
+    CpCaseStudyHistoryComponent,
+    CpImagesHistoryComponent,
+    CpVideoClipHistoryComponent
+
+
   ],
   imports: [
     BrowserModule,
