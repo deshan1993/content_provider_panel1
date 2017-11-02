@@ -71,7 +71,8 @@ export const routes: Routes = [
     { path: 'cp-books', component: CpBooksComponent},
     { path: 'cp-case-study', component: CpCaseStudyComponent},
     { path: 'cp-images', component: CpImagesComponent},
-    { path: 'cp-video-clip', component: CpVideoClipComponent}
+    { path: 'cp-video-clip', component: CpVideoClipComponent},
+    { path: '', redirectTo: 'cp-articles', pathMatch: 'full' }
   ]
 },
   { path: 'cp-history', component: ContentProviderHistoryComponent,
@@ -81,7 +82,8 @@ export const routes: Routes = [
     { path: 'cp-books-history', component: CpBooksHistoryComponent},
     { path: 'cp-case-study-history', component: CpCaseStudyHistoryComponent},
     { path: 'cp-images-history', component: CpImagesHistoryComponent},
-    { path: 'cp-video-clip-history', component: CpVideoClipHistoryComponent}
+    { path: 'cp-video-clip-history', component: CpVideoClipHistoryComponent},
+    { path: '', redirectTo: 'cp-articles-history', pathMatch: 'full' }
   ]
 },
   { path: '', redirectTo: 'cp-dashboard', pathMatch: 'full' }
